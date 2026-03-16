@@ -10,34 +10,35 @@ public class funcionario {
     public String nome, cargoAtual;
     public float salarioAtual;
     
-    //public funcionario (String nome, String cargo, float salario, int matricula){
-        //this.nome = nome;
-        //cargoAtual = cargo;
-        //salarioAtual = salario;
-        //this.matricula = matricula;
-    //} 
-    
     public void cadastrar(String nome, String cargo, float salario, int matricula){
         this.nome = nome;
         cargoAtual = cargo;
         salarioAtual = salario;
         this.matricula = matricula;
         
-        System.out.println("Ola, sou "+nome+". Sou o "+cargoAtual+".");
-        System.out.println("Meu salario eh "+salarioAtual+" e meu numero de matricula eh "+matricula+".");
+        System.out.println("Cadastro feito.");
+        System.out.println("");
     }
     
     public void consultar(){
-        System.out.println("Consultar funcionario.");
+        System.out.println("Consultar funcionario:");
+        System.out.println("Nome: "+nome);
+        System.out.println("Cargo: "+cargoAtual);
+        System.out.println("Salario Atual: "+salarioAtual);
+        System.out.println("Numero de matricula: "+matricula);
+        System.out.println("");
     }
     
     public void atualizarSalario(float novoSalario){
+        System.out.println("Atualizar Salario:");
         System.out.println("Salario antigo: "+salarioAtual);
         salarioAtual = novoSalario;
         System.out.println("Salario novo: "+salarioAtual);
+        System.out.println("");
     }
     
     public void listarDependentes(){
         System.out.println("Listar Dependentes.");
+        System.out.println("");
     }
 }
