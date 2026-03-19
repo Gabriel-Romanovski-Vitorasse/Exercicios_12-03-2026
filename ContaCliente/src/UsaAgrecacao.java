@@ -11,6 +11,7 @@ void main(){
     conta01.deposita(2000);
     conta01.verificarSaldo();
     conta01.transfere();
+    conta01.verificarTransacao();
     
     //System.out.println("Nome do cliente: "+cli01.nome);
     
