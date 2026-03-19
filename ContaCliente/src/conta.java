@@ -9,9 +9,9 @@
  */
 public class conta {
     int numero;
-    double saldo;
+    private double saldo;
     
-    cliente c;
+    cliente cli;
 
     public conta() {}
 
@@ -20,28 +20,30 @@ public class conta {
         this.saldo = saldo;
     }
     
-    boolean saca(double valor){
-        saldo -= valor;
-        return true;
+    boolean sacar(double valor){
+        if(verificarTransacao(valor)){
+            saldo -= valor;
+            return true;
+        }
+        return false;
     }
     
-    void deposita(double valor){
+    void depositar(double valor){
         System.out.println("Saldo antigo: "+saldo);
         saldo += valor;
         System.out.println("Saldo novo: "+saldo);
-        System.out.println(" ");
     }
     
-    void transfere(){
-        System.out.println("Transfere.");
-        System.out.println(" ");
+    void transferir(conta destino, double valor){
+        //this.sacar(valor);
+        sacar(valor);
+        destino.depositar(valor);
     }
     void verificarSaldo(){
-        System.out.println("Verificar Saldo: "+saldo);
-        System.out.println(" ");
+        System.out.println("Saldo da conta "+numero+": "+saldo);
     }
-    boolean verificarTransacao(){
-        return true;
+    private boolean verificarTransacao(double valor){
+        return saldo >= valor;
     }
     
     
