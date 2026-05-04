@@ -1,5 +1,5 @@
 
-public class Animal extends SerVivo{
+public abstract class Animal extends SerVivo{
     String sexo;
     int numeroPatas;
     
@@ -9,4 +9,10 @@ public class Animal extends SerVivo{
     void mover(){
     System.out.println("Animal: Moveu");
     }
+    
+    /*void falar(){
+        System.out.println("Animal: Falou");
+    }*/
+    
+    abstract void falar();
 }
